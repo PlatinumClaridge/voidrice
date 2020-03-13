@@ -1,0 +1,4 @@
+#!/bin/sh
+# Automatic reminders showing next calcurse event every 60 minutes
+
+while true; do notify-send "$(calcurse -D ~/.config/calcurse -n)"; sleep 3600; done

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+vidlist="
+dwm (window manager)	https://www.youtube.com/watch?v=unqsQJaECv0
+st (terminal)		https://www.youtube.com/watch?v=9H75enWM22k
+dmenu (launcher)	https://www.youtube.com/watch?v=R9m723tAurA
+zsh (shell)		https://www.youtube.com/watch?v=eLEo4OQ-cuQ
+vim (text editor)	https://www.youtube.com/watch?v=jUfw7aHD_xY
+sxiv (image viewer)	https://www.youtube.com/watch?v=GYW9i_u5PYs
+ncmpcpp (music player)	https://www.youtube.com/watch?v=sZIEdI9TS2U
+mutt (email)		https://www.youtube.com/watch?v=mPiQuWbF57M
+newsboat (RSS reader)	https://www.youtube.com/watch?v=dUFCRqs822w
+ranger (file manager)	https://www.youtube.com/watch?v=L6Vu7WPkoJo
+zathura (pdf viewer)	https://www.youtube.com/watch?v=V_Iz4zdyRM4
+gpg keys		https://www.youtube.com/watch?v=DMGIlj7u7Eo
+calcurse (calendar)	https://www.youtube.com/watch?v=hvc-pHjbhdE
+vi mode in shell	https://www.youtube.com/watch?v=GqoJQft5R2E
+"
+echo "$vidlist" | grep -P "^$(echo "$vidlist" | grep "https:" | sed 's/\t.*//g' | dmenu -i -p "Learn about what? (ESC to cancel)" -l 20 | awk '{print $1}')\s" | sed 's/.*\t//' | xargs -r mpv

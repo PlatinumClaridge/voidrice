@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+# This file runs when a DM logs you into a graphical session.
+# If you use startx/xinit like a Chad, this file will also be sourced.
+
+mpd &			# starts the music player daemon
+remaps &		# run the remaps script, switching caps/esc and more; check it for more info
+setbg &			# set the background with the `setbg` script
+xcompmgr &		# xcompmgr for transparency
+$STATUSBAR &		# script for updating the status bar
+dunst &			# dunst for notifications
+unclutter &		# Remove mouse when idle
+mpd-module-update &	# Check for when to update the mpd module
+calnotify &		# Starts script for calcurse notifications every 60 minutes
