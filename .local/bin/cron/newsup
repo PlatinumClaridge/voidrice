@@ -9,13 +9,13 @@ export DISPLAY=:0.0
 
 ping -q -c 1 1.1.1.1 > /dev/null || exit
 
-notify-send "📰 Updating RSS feeds..."
+/usr/bin/notify-send "📰 Updating RSS feeds..."
 
-# pgrep -x newsboat >/dev/null && xdotool key --window "$(xdotool search --name newsboat)" R && exit
+pgrep -x newsboat >/dev/null && /usr/bin/xdotool key --window "$(/usr/bin/xdotool search --name newsboat)" R && exit
 
 echo 🔃 > /tmp/newsupdate
-pkill -RTMIN+6 "${STATUSBAR:?}"
-newsboat -x reload
+pkill -RTMIN+6 dwmblocks
+/usr/bin/newsboat -x reload
 rm -f /tmp/newsupdate
-pkill -RTMIN+6 "${STATUSBAR:?}"
-notify-send "📰 RSS feed update complete."
+pkill -RTMIN+6 dwmblocks
+/usr/bin/notify-send "📰 RSS feed update complete."
