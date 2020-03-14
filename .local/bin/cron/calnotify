@@ -1,0 +1,9 @@
+#/bin/sh
+
+# Use with cron to receive notifications of upcoming appointments
+
+# Required to display notifications when run as a cronjob:
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
+export DISPLAY=:0.0
+
+notify-send "$(calcurse -D ~/.config/calcurse -n)"
