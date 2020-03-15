@@ -10,3 +10,4 @@ $STATUSBAR &		# script for updating the status bar
 dunst &			# dunst for notifications
 unclutter &		# Remove mouse when idle
 mpd-module-update &	# Check for when to update the mpd module
+notify-send -i ~/.local/share/larbs/larbs.png "Welcome to LARBS" "Press super+F1 for the help menu." # LARBSWELCOME
