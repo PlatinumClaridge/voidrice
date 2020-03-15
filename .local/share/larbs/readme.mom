@@ -178,6 +178,8 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+F3\fP \(en Select screen/display to use
 .ITEM
+\f(CWMOD+F4\fP \(en suspend (will ask to confirm)
+.ITEM
 \f(CWMod+F9\fP \(en Mount a USB drive/hard drive or Android
 .ITEM
 \f(CWMod+F10\fP \(en Unmount a non-essential drive or Android
@@ -237,9 +239,9 @@ previous recordings as their names are based on their exact times.
 .ITEM
 \f(CWPrintScreen\fP \(en Take a screenshot
 .ITEM
-\f(CWShift+PrintScreen\fP \(en Select area to screenshot
+\f(CWShift+PrintScreen\fP \(en Opens dmenu menu to select screenshot method
 .ITEM
-\f(CWMod+PrintScreen\fP \(en Opens dmenu menu to select kind of audio/video recording
+\f(CWMod+PrintScreen\fP \(en Opens dmenu menu to select audio/video recording method
 .ITEM
 \f(CWMod+Delete\fP \(en Kills any recording started in the above way.
 .ITEM
