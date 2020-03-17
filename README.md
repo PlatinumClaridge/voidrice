@@ -6,7 +6,7 @@ These are the dotfiles deployed by [LARBS](https://github.com/PlatinumClaridge/L
 - Settings for:
 	- vim/nvim (text editor)
 	- zsh (shell)
-	- ranger (file manager)
+	- lf (file manager)
 	- mpd/ncmpcpp (music)
 	- newsboat (rss reader)
 	- neomutt (email client)
