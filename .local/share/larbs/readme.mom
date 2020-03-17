@@ -145,7 +145,7 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 \fINote:\fP LARBS installs all of these programs by default.
 .LI
 .ITEM
-\f(CWMod+r\fP \(en ranger (file browser/manager)
+\f(CWMod+r\fP \(en lf (file browser/manager)
 .ITEM
 \f(CWMod+e\fP \(en neomutt (email client)
 .ITEM
