@@ -49,8 +49,27 @@ cmd copyto ${{
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
 }}
 
-cmd bulkrename ${{
-    vidir
+# cmd bulkrename ${{
+#     vidir
+# }}
+
+cmd bulk-rename ${{
+    old=$(mktemp)
+    new=$(mktemp)
+    [ -n $fs ] && fs=$(ls)
+    printf "$fs\n" > $old
+    printf "$fs\n" > $new
+    $EDITOR $new
+    [ $(cat $new | wc -l) -ne $(cat $old | wc -l) ] && exit
+    paste $old $new | while read names; do
+        src=$(printf $names | cut -f1)
+        dst=$(printf $names | cut -f2)
+        [ $src = $dst ] && continue
+        [ -e $dst ] && continue
+        mv $src $dst
+    done
+    rm $old $new
+    lf -remote "send $id unselect"
 }}
 
 # Bindings
@@ -65,7 +84,7 @@ map M moveto
 map a push %mkdir<space>
 map r push :rename<space>
 map R $lf -remote "send $id push :rename<space>$f"
-map b bulkrename
+map b bulk-rename
 map <c-r> reload
 map <enter> shell
 map x $$f
