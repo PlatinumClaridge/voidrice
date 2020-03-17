@@ -8,7 +8,7 @@
 .DOCTYPE    DEFAULT
 .COPYSTYLE  FINAL
 .PRINTSTYLE TYPESET
-.PT_SIZE 10
+.PT_SIZE 12
 .START
 Use vim keys (\f(CWh/j/k/l\fP) to navigate this document.
 Pressing \f(CWs\fP will fit it to window width (\f(CWa\fP to revert).
@@ -16,7 +16,7 @@ Pressing \f(CWs\fP will fit it to window width (\f(CWa\fP to revert).
 \f(CWSuper+f\fP to toggle fullscreen.
 \f(CWf\fP will highlight links to follow which are selectable by typing the number that appears plus \f(CWEnter\fP.
 \f(CWq\fP to quit.
-(These are general shortcuts of \f(CWzathura\fP, the pdf reader.)
+(These are general keybinds for \f(CWzathura\fP, the pdf reader.)
 .LI
 .ITEM
 \f(CWMod+F1\fP will show this document at any time.
@@ -28,11 +28,8 @@ Questions or suggestions? Email me at
 .PDF_WWW_LINK "mailto:am@claridge.xyz" "am@claridge.xyz"
 .LI
 .ITEM
-LARBS website:
-.PDF_WWW_LINK "https://claridge.xyz/larbs"
-.ITEM
-My website:
-.PDF_WWW_LINK "https://claridge.xyz"
+LARBS Void Edition website:
+.PDF_WWW_LINK "https://claridge.xyz/"
 .LIST OFF
 FAQs are at the end of this document.
 .HEADING 1 "Welcome!"
@@ -72,7 +69,8 @@ The menu button (usually between the right Alt and Ctrl) is an alternative Super
 This is to make one-handing on laptops easier.
 .LIST OFF
 If you'd like to change any of these keyboard changes, you need only open and change \f(CW~/.local/bin/remaps\fP.
-Actually, this should go without saying, but \fIeverything\fP here can easily be changed.
+Additionally, all custom scripts in LARBS are located in \f(CW~/.local/bin/\fP.
+This may go without saying, but \fIEverything\fP here can easily be changed.
 Below in this document, there is information about where to change programs/components.
 .PP
 Additionally, while this isn't a part of the desktop environment, the default editing mode in the shell is using vi bindings.
@@ -82,7 +80,9 @@ This setting can be changed if you don't like it by deleting or commenting out t
 .PP
 If you're new to dwm, notice the status bar on the top of the screen.
 To the left side, you'll see the numbers of your current workspace/tag(s).
-On the right side, you'll see various system status notifiers, the date, volume, news updates, even music and local weather if possible, etc.
+On the right side, you'll see various system status notifiers, the date, volume, news updates, even music and local weather if possible.
+Each module on the right of the status bar is a script located in \f(CW~/.local/bin/statusbar/\fP.
+You can see how they work and modify them from there.
 The program that sets the bar can be found here:
 .PDF_WWW_LINK "https://github.com/PlatinumClaridge/dwmblocks"
 You can read the specifics there or clone and change it if you want.
@@ -147,7 +147,7 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+r\fP \(en lf (file browser/manager)
 .ITEM
-\f(CWMod+e\fP \(en neomutt (email client)
+\f(CWMod+e\fP \(en neomutt (email client) \(en Must be first configured by running \f(CWmw add\fP.
 .ITEM
 \f(CWMod+m\fP \(en ncmpcpp (music player)
 .ITEM
@@ -170,7 +170,7 @@ To type capital letters, hold down the \f(CWShift\fP key\(emthat might sound lik
 .ITEM
 \f(CWMod+Shift+Backspace\fP \(en reboot (will ask to confirm)
 .ITEM
-\f(CWMod+Shift+Escape\fP \(en exit the graphical environment (will ask to confirm)
+\f(CWMod+Shift+Escape\fP \(en log out of the graphical environment (will ask to confirm)
 .ITEM
 \f(CWMod+F1\fP \(en Shows this document
 .ITEM
@@ -256,13 +256,17 @@ buttons, screen brightness, email, web browsing buttons, etc.) to what you
 would expect.
 .HEADING 1 "Configuration"
 .PP
-Here's a brief reference as to what program does what and where you can modify them.
-Some of the programs marked as "suckless" programs must be recompiled after being reconfigured.
-That means you should go to their directory in \f(CW~/repos/\fP and run \f(CWmake && sudo make install\fP after making changes.
-.LI
-.ITEM
-dwm: the window manager itself \(en \f(CW~/repos/dwm/\fP (suckless)
-.LIST OFF
+Dotfiles/settings files are located in \f(CW~/.config/\fP. Note: dotfiles to programs not included in LARBS
+are there as well, so not all of these configs are maintained by LARBS/voidrice.
+.PP
+Suckless programs like st (the terminal), dmenu, and dwm, among others do not have typical config files.
+Their configs can be found in \f(CW~/repos/\fP, and are compiled directly into the program.
+These suckless programs work this way for reasons beyond the scope of this document.
+.PP
+Regardless, you can still easily modify each of their \f(CWconfig.h\fP files,
+then \f(CWmake clean && sudo make install\fP
+to apply your changes. For st, you'll have to open a new terminal window to see your changes. For dwm,
+you'll have to relaunch using \f(CWMod+F2\fP.
 .HEADING 1 "Frequently Asked Questions (FAQs)"
 .HEADING 2 "My keyboard isn't working as expected!"
 .PP
@@ -271,7 +275,7 @@ These settings may override your preferred settings, so you should open this fil
 .HEADING 2 "My audio isn't working!"
 .PP
 After a fresh install, the Linux audio system (ALSA) often mutes outputs.
-You may also need to set your preferred default output sink which you can do by the command line, or by selecting one with \f(CWpulsemixer\fP (\f(CWmod+A\fP).
+You may also need to set your preferred default output sink which you can do by the command line, or by selecting one with \f(CWalsamixer\fP (\f(CWmod+A\fP).
 
 If you have a more complex audio setup and can't be bothered to figure out ALSA, you might want to install and enable PulseAudio, which general "just werks".
 .HEADING 2 "How do I copy and paste?"
