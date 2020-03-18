@@ -13,4 +13,5 @@ sed "s/\s*#.*$//;/^\s*$/d" "$HOME/.config/directories" | tee >(awk '{print $1"=\
 	| awk '{print "map g"$1" cd "$2""}' >> "$lf_shortcuts"
 
 # Format the `files` file in the correct syntax and sent it to both configs.
-sed "s/\s*#.*$//;/^\s*$/d"  "$HOME/.config/files" | tee >(awk '{print $1"=\"$EDITOR "$2"\" \\"}' >> "$shell_shortcuts")
+sed "s/\s*#.*$//;/^\s*$/d"  "$HOME/.config/files" | tee >(awk '{print $1"=\"$EDITOR "$2"\" \\"}' >> "$shell_shortcuts") \
+	| awk '{print "map "$1" $($EDITOR "$2")"}' >> "$lf_shortcuts"

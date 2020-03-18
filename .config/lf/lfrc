@@ -70,7 +70,7 @@ cmd bulk-rename ${{
 }}
 
 # Bindings
-map c $lf -remote "send $id cd $(cut -d'	' -f2 ~/.config/directories | fzf)"
+map c
 map <c-f> $lf -remote "send $id select '$(fzf)'"
 map J $lf -remote "send $id cd $(cut -d'	' -f2 ~/.config/directories | fzf)"
 map gg top
