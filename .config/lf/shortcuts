@@ -1,3 +1,14 @@
 # lf settings
 # Add personalized lf keybinds in here.
 # map <key/combination> <command>
+
+# Movement
+map gh cd ~
+map gd cd ~/Documents
+map gD cd ~/Downloads
+map gm cd ~/Music
+map gpp cd ~/Pictures
+map gvv cd ~/Videos
+map gcf cd ~/.config
+map gsc cd ~/.local/bin
+map grep cd ~/repos
