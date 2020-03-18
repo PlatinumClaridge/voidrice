@@ -78,6 +78,8 @@ set clipboard+=unnamedplus
 	autocmd BufWritePost files,directories !shortcuts
 " Run xrdb whenever Xdefaults or Xresources are updated.
 	autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
+" Save a copy of crontab after adding/updating.
+	autocmd BufWritePost /tmp/crontab* !cronsave &
 
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
