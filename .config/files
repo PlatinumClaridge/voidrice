@@ -10,4 +10,3 @@ cfn	~/.config/newsboat/config
 cfmb	~/.config/ncmpcpp/bindings
 cfmc	~/.config/ncmpcpp/config
 cfl	~/.config/lf/lfrc
-cfls	~/.config/lf/shortcuts
