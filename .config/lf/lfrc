@@ -1,6 +1,7 @@
 # lf settings
 
 # Basic vars
+source "~/.config/lf/shortcuts"
 set shell sh
 set previewer ~/.config/lf/scope
 set shellopts '-eu'
