@@ -17,8 +17,8 @@ compinit
 _comp_options+=(globdots)
 
 # History
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=$ZDOTDIR/.history
 
 # Use vim keys in tab complete menu:
@@ -27,6 +27,8 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^F' history-incremental-pattern-search-forward
 
 export KEYTIMEOUT=1
 
