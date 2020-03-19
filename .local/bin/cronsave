@@ -1,4 +1,4 @@
 #!/bin/sh
 # Saves a copy of the current crontab for backup.
 # This is run automatically by vim after creating/modifying a crontab.
-sleep 3; crontab -l > ~/Documents/crontab
+sleep 3; crontab -l > ~/Documents/crontab.backup
