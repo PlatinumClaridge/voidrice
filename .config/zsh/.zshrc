@@ -1,8 +1,8 @@
 # Luke's config for the Zoomer Shell
 
 autoload -U colors && colors
-#PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-PS1="%B%{$fg[magenta]%} %~%{$fg[red]%} >%{$reset_color%}%b "
+PS1="%B%{$fg[red]%}[ %{$fg[yellow]%}%n%{$fg[blue]%}@%{$fg[green]%}%M %{$fg[magenta]%}%~%{$fg[red]%} ]%{$reset_color%}$%b "
+# PS1="%B%{$fg[magenta]%} %~%{$fg[red]%} >%{$reset_color%}%b "
 
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
