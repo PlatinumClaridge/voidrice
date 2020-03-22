@@ -155,6 +155,11 @@
 /* *.color256: 0#1d2021 */
 /* *.color257: 15#ebdbb2 */
 
+!! Set the background, foreground and cursor colors as below:
+*.background: #282828
+*.foreground: #f8f8ff
+/* *.cursorColor: white */
+
 ! black
 *.color0:       #101010
 *.color8:       #434758
