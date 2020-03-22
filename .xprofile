@@ -3,14 +3,14 @@
 # This file runs when a DM logs you into a graphical session.
 # If you use startx/xinit like a Chad, this file will also be sourced.
 
-remaps &		# run the remaps script, switching caps/esc and more; check it for more info
-setbg &			# set the background with the `setbg` script
-#xrdb ~/.config/Xresources &	# Uncomment to use Xresources colors/settings on startup
-xcompmgr &		# xcompmgr for transparency
-$STATUSBAR &		# start the statusbar
-dunst &			# dunst for notifications
-unclutter &		# Remove mouse when idle
-mpd-module-update &	# Check for when to update the mpd module
+remaps &			# run the remaps script, switching caps/esc and more; check it for more info
+setbg &				# set the background with the `setbg` script
+xrdb ~/.config/Xresources & 	# applies Xresources at startup
+xcompmgr &			# xcompmgr for transparency
+$STATUSBAR &			# start the statusbar
+dunst &				# dunst for notifications
+unclutter &			# remove mouse when idle
+mpd-module-update &		# check for when to update the mpd module
 notify-send -i ~/.local/share/larbs/larbs.png "Welcome to LARBS" "Press super+F1 for the help menu." # LARBSWELCOME
 
 # This is the list for lf icons:
