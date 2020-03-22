@@ -161,33 +161,33 @@
 /* *.cursorColor: white */
 
 ! black
-*.color0:       #101010
-*.color8:       #434758
+*.color0:       #323d43
+*.color8:       #323d43
 
 ! red
-*.color1:       #f07178
-*.color9:       #ff8b92
+*.color1:       #e68183
+*.color9:       #e39b7b
 
 ! green
-*.color2:       #c3e88d
-*.color10:      #ddffa7
+*.color2:       #a7c080
+*.color10:      #333b2f
 
 ! yellow
-*.color3:       #ffcb6b
-*.color11:      #ffe585
+*.color3:       #d9bb80
+*.color11:      #d9bb80
 
 ! blue
-*.color4:       #82aaff
-*.color12:      #9cc4ff
+*.color4:       #89beba
+*.color12:      #203a41
 
 ! magenta
-*.color5:       #c792ea
-*.color13:      #e1acff
+*.color5:       #d3a0bc
+*.color13:      #d3a0bc
 
 ! cyan
-*.color6:       #89ddff
-*.color14:      #a3f7ff
+*.color6:       #87c095
+*.color14:      #87c095
 
 ! white
-*.color7:       #d0d0d0
-*.color15:      #ffffff
+*.color7:       #d8caac
+*.color15:      #d8caac
