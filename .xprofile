@@ -7,7 +7,6 @@ remaps &			# run the remaps script, switching caps/esc and more; check it for mo
 setbg &				# set the background with the `setbg` script
 xrdb ~/.config/Xresources & 	# applies Xresources at startup
 xcompmgr &			# xcompmgr for transparency
-$STATUSBAR &			# start the statusbar
 dunst &				# dunst for notifications
 unclutter &			# remove mouse when idle
 mpd-module-update &		# check for when to update the mpd module
