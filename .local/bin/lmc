@@ -27,4 +27,4 @@ case "$1" in
 	control) control ;;
 esac
 
-pkill -RTMIN+10 "${STATUSBAR:?}" &
+pkill -RTMIN+10 dwmblocks &
