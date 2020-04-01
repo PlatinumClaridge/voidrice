@@ -11,7 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
@@ -21,6 +21,10 @@ set mouse=a
 set nohlsearch
 set clipboard+=unnamedplus
 
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
 " Some basics:
 	nnoremap c "_c
 	set nocompatible
@@ -28,6 +32,7 @@ set clipboard+=unnamedplus
 	syntax on
 	set encoding=utf-8
 	set number relativenumber
+	set noshowmode
 " Enable autocompletion:
 	set wildmode=longest,list,full
 " Disables automatic commenting on newline:
