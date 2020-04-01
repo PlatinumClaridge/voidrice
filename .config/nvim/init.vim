@@ -13,6 +13,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 set bg=light
@@ -33,6 +34,8 @@ let g:lightline = {
 	set encoding=utf-8
 	set number relativenumber
 	set noshowmode
+" Always show statusline
+	set laststatus=2
 " Enable autocompletion:
 	set wildmode=longest,list,full
 " Disables automatic commenting on newline:
