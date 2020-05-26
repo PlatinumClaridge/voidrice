@@ -34,6 +34,7 @@ export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export QT_QPA_PLATFORMTHEME="gtk2"
+export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 
 mpd >/dev/null 2>&1
 
