@@ -33,6 +33,7 @@ export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
 export LESS_TERMCAP_se="$(printf '%b' '[0m')"
 export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+export QT_QPA_PLATFORMTHEME="gtk2"
 
 mpd >/dev/null 2>&1
 
