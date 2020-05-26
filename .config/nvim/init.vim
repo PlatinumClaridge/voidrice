@@ -76,8 +76,9 @@ let g:lightline = {
 	autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
 	autocmd BufRead,BufNewFile *.tex set filetype=tex
 
-" Automatically deletes all trailing whitespace on save.
+" Automatically deletes all trailing whitespace and new lines on save.
 	autocmd BufWritePre * %s/\s\+$//e
+	autocmd BufWritepre * %s/\n\+\%$//e
 
 " When shortcut files are updated, renew bash and ranger configs with new material:
 	autocmd BufWritePost files,directories !shortcuts
